@@ -2,11 +2,10 @@ syntax = "proto3";
 
 package auth;
 
-option go_package = "./auth";
-
 service AuthService {
   rpc Register(RegisterRequest) returns (RegisterResponse) {}
   rpc Login(LoginRequest) returns (LoginResponse) {}
+  rpc Logout(LogoutRequest) returns (LogoutResponse) {}
   rpc Validate(ValidateRequest) returns (ValidateResponse) {}
 }
 
@@ -43,6 +42,7 @@ message LoginResponse {
 
 message LogoutRequest {
   int64 userId = 1;
+  string token = 2;
 }
 
 message LogoutResponse {
