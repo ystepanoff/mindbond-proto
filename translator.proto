@@ -2,6 +2,8 @@ syntax = "proto3";
 
 package translator;
 
+option go_package = "./";
+
 service TranslatorService {
   rpc Translate(TranslateRequest) returns (TranslateResponse) {}
 }
