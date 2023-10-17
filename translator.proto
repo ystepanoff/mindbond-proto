@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package translator;
 
-option go_package = "./";
+option go_package = "./pb";
 
 service TranslatorService {
   rpc Translate(TranslateRequest) returns (TranslateResponse) {}
