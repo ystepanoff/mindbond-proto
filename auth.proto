@@ -60,5 +60,7 @@ message ValidateResponse {
   int64 status = 1;
   string error = 2;
   int64 userId = 3;
-  string handle = 4;
+  string email = 4;
+  string handle = 5;
+  string language = 6;
 }
