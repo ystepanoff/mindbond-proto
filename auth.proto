@@ -40,6 +40,18 @@ message LoginResponse {
   string token = 5;
 }
 
+// DryLogin (check that password is correct)
+
+message DryLoginRequest {
+  string email = 1;
+  string password = 2;
+}
+
+message DryLoginResponse {
+  int64 status = 1;
+  bool correct = 2;
+}
+
 // Logout
 
 message LogoutRequest {
