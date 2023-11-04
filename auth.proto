@@ -49,7 +49,7 @@ message DryLoginRequest {
 
 message DryLoginResponse {
   int64 status = 1;
-  bool correct = 2;
+  string error = 2;
 }
 
 // Logout
