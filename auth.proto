@@ -6,6 +6,7 @@ option go_package = "./pb";
 
 service AuthService {
   rpc Register(RegisterRequest) returns (RegisterResponse) {}
+  rpc Update(UpdateRequest) returns (UpdateResponse) {}
   rpc Login(LoginRequest) returns (LoginResponse) {}
   rpc Logout(LogoutRequest) returns (LogoutResponse) {}
   rpc Validate(ValidateRequest) returns (ValidateResponse) {}
@@ -21,6 +22,21 @@ message RegisterRequest {
 }
 
 message RegisterResponse {
+  int64 status = 1;
+  string error = 2;
+}
+
+// Update
+
+message UpdateRequest {
+  string userId = 1;
+  string email = 2;
+  string password = 3;
+  string language = 4;
+  string handle = 5;
+}
+
+message UpdateResponse {
   int64 status = 1;
   string error = 2;
 }
