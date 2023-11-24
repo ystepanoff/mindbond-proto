@@ -8,6 +8,7 @@ service AuthService {
   rpc Register(RegisterRequest) returns (RegisterResponse) {}
   rpc Update(UpdateRequest) returns (UpdateResponse) {}
   rpc Login(LoginRequest) returns (LoginResponse) {}
+  rpc DryLogin(DryLoginRequest) returns (DryLoginResponse) {}
   rpc Logout(LogoutRequest) returns (LogoutResponse) {}
   rpc Validate(ValidateRequest) returns (ValidateResponse) {}
 }
