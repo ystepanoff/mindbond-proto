@@ -35,6 +35,7 @@ message UpdateRequest {
   string password = 3;
   string language = 4;
   string handle = 5;
+  string token = 6;
 }
 
 message UpdateResponse {
