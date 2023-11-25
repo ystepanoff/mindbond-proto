@@ -5,11 +5,55 @@ package chat;
 option go_package = "./pb";
 
 service ChatService {
+  rpc AddContact(AddContactRequest) returns (AddContactResponse) {}
+  rpc RemoveContact(RemoveContactRequest) returns (RemoveContactResponse) {}
+  rpc FetchContacts(FetchContactsRequest) returns (stream UserContact) {}
+
   rpc CreateChat(CreateChatRequest) returns (CreateChatResponse) {}
   rpc FindChat(FindChatRequest) returns (FindChatResponse) {}
   rpc DeleteChat(DeleteChatRequest) returns (DeleteChatResponse) {}
+
   rpc AddMessage(AddMessageRequest) returns (AddMessageResponse) {}
 }
+
+// Add contact
+
+message AddContactRequest {
+  int64 userId = 1;
+  string token = 2;
+  string handle = 3;
+}
+
+message AddContactResponse {
+  int64 status = 1;
+  string error = 2;
+}
+
+// Remove contact
+
+message RemoveContactRequest {
+  int64 userId = 1;
+  string token = 2;
+  string handle = 3;
+}
+
+message RemoveContactResponse {
+  int64 status = 1;
+  string error = 2;
+}
+
+// Fetch contacts
+
+message FetchContactsRequest {
+  int64 userId = 1;
+  string token = 2;
+}
+
+message UserContact {
+  int64 userId = 1;
+  string handle = 5;
+}
+
 
 // CreateChat
 
@@ -66,3 +110,4 @@ message AddMessageResponse {
   int64 status = 1;
   string error = 2;
 }
+
