@@ -58,8 +58,8 @@ message UserContact {
 // CreateChat
 
 message CreateChatRequest {
-  int64 user1ID = 1;
-  int64 user2ID = 2;
+  int64 user1Id = 1;
+  int64 user2Id = 2;
 }
 
 message CreateChatResponse {
