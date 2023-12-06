@@ -111,7 +111,7 @@ message LookupRequest {
 message LookupResponse {
   int64 status = 1;
   string error = 2;
-  int64 id = 3;
+  int64 userId = 3;
   string email = 4;
   string handle = 5;
 }
