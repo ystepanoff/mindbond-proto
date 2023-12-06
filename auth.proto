@@ -12,6 +12,8 @@ service AuthService {
   rpc DryLogin(DryLoginRequest) returns (DryLoginResponse) {}
   rpc Logout(LogoutRequest) returns (LogoutResponse) {}
   rpc Validate(ValidateRequest) returns (ValidateResponse) {}
+
+  rpc Lookup(LookupRequest) returns (LookupResponse) {}
 }
 
 // Register
@@ -96,4 +98,20 @@ message ValidateResponse {
   string email = 4;
   string handle = 5;
   string language = 6;
+}
+
+// Lookup
+
+message LookupRequest {
+  int64 id = 1;
+  string email = 2;
+  string handle = 3;
+}
+
+message LookupResponse {
+  int64 status = 1;
+  string error = 2;
+  int64 id = 3;
+  string email = 4;
+  string handle = 5;
 }
