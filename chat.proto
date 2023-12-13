@@ -7,7 +7,7 @@ option go_package = "./pb";
 service ChatService {
   rpc AddContact(AddContactRequest) returns (AddContactResponse) {}
   rpc RemoveContact(RemoveContactRequest) returns (RemoveContactResponse) {}
-  rpc FetchContacts(FetchContactsRequest) returns (stream UserContact) {}
+  rpc FetchContacts(FetchContactsRequest) returns (FetchContactsResponse) {}
 
   rpc CreateChat(CreateChatRequest) returns (CreateChatResponse) {}
   rpc FindChat(FindChatRequest) returns (FindChatResponse) {}
@@ -47,6 +47,12 @@ message RemoveContactResponse {
 message FetchContactsRequest {
   int64 userId = 1;
   string token = 2;
+}
+
+message FetchContactsResponse {
+  int64 status = 1;
+  string error = 2;
+  repeated UserContact contacts = 3 [packed=true];
 }
 
 message UserContact {
