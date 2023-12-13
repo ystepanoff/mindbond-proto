@@ -52,7 +52,7 @@ message FetchContactsRequest {
 message FetchContactsResponse {
   int64 status = 1;
   string error = 2;
-  repeated UserContact contacts = 3 [packed=true];
+  repeated UserContact contacts = 3;
 }
 
 message UserContact {
