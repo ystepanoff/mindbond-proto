@@ -58,7 +58,7 @@ message FetchContactsResponse {
 message UserContact {
   int64 userId = 1;
   string handle = 2;
-  bool approved = 3;
+  optional bool approved = 3;
 }
 
 
