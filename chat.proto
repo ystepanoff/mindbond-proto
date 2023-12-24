@@ -27,6 +27,7 @@ message AddContactRequest {
 message AddContactResponse {
   int64 status = 1;
   string error = 2;
+  int64 contactId = 3;
 }
 
 // Remove contact
