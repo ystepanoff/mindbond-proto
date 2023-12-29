@@ -114,4 +114,5 @@ message LookupResponse {
   int64 userId = 3;
   string email = 4;
   string handle = 5;
+  string language = 6;
 }
