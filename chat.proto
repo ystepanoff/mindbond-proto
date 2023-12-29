@@ -108,10 +108,8 @@ message DeleteChatResponse {
 
 message AddMessageRequest {
   int64 userFromId = 1;
-  string userFromLanguage = 2;
-  int64 userToId = 3;
-  string userToLanguage = 4;
-  string message = 5;
+  int64 userToId = 2;
+  string message = 3;
 }
 
 message AddMessageResponse {
