@@ -117,3 +117,21 @@ message AddMessageResponse {
   string error = 2;
 }
 
+message FetchMessagesRequest {
+  int64 userFromId = 1;
+  int64 userToId = 2;
+  int64 count = 3;
+}
+
+message FindMessageResponse {
+  int64 status = 1;
+  string error = 2;
+  repeated Message messages = 3;
+}
+
+message Message {
+  int64 userOriginal = 1;
+  string original = 2;
+  int64 userTranslated = 3;
+  string translated = 4;
+}
