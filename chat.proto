@@ -68,6 +68,7 @@ message UserContact {
 message CreateChatRequest {
   int64 user1Id = 1;
   int64 user2Id = 2;
+  string token = 3;
 }
 
 message CreateChatResponse {
@@ -85,6 +86,7 @@ message FindChatData {
 message FindChatRequest {
   int64 user1Id = 1;
   int64 user2Id = 2;
+  string token = 3;
 }
 
 message FindChatResponse {
@@ -97,6 +99,7 @@ message FindChatResponse {
 
 message DeleteChatRequest {
   int64 chatId = 1;
+  string token = 2;
 }
 
 message DeleteChatResponse {
@@ -110,6 +113,7 @@ message AddMessageRequest {
   int64 userFromId = 1;
   int64 userToId = 2;
   string message = 3;
+  string token = 4;
 }
 
 message AddMessageResponse {
@@ -121,6 +125,7 @@ message FetchMessagesRequest {
   int64 userFromId = 1;
   int64 userToId = 2;
   int64 count = 3;
+  string token = 4;
 }
 
 message FetchMessagesResponse {
