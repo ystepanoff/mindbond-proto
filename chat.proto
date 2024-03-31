@@ -14,7 +14,7 @@ service ChatService {
   rpc DeleteChat(DeleteChatRequest) returns (DeleteChatResponse) {}
 
   rpc AddMessage(AddMessageRequest) returns (AddMessageResponse) {}
-  rpc FetchMessages(FetchContactsRequest) returns (FetchContactsResponse) {}
+  rpc FetchMessages(FetchMessagesRequest) returns (FetchMessagesResponse) {}
 }
 
 // Add contact
